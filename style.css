@@ -1,0 +1,282 @@
+
+body {
+	background-color: rgb(148, 25, 18);
+	font-family: Arial;
+}
+.topnav {
+	background-color: #333;
+	overflow: hidden;
+}
+.topnav {
+	border-radius: 25px;
+	padding: 20px
+	width: 200px
+	height: 150px;
+}
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+.topnav a.active {
+	background-color: #6CC6A2;
+	color: white;
+}
+#thickID {
+	font-weight: bold;
+	font-size: 16;
+}
+#navID {
+	background-color: #2ECC71;
+	font-family: Arial;
+	font-size: 18px;
+	padding: 15px;
+	text-align: center;
+}
+li {
+	display: inline;
+}
+h1 {
+	text-align: center;
+}
+#contForm {
+	max-width: 100%;
+}
+#contForm {
+	text-align: center;
+}
+#infoTable {
+	text-align: center;
+}
+#infoTable {
+	border-bottom: 1px
+}
+h2 {
+	text-decoration: overline;
+	font-size: 30px;
+}
+#contForm {
+	position: center;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.column {
+	text-align:justify;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.banner {
+	width: 100%;
+}
+
+.responsive {
+	width: 100%;
+	height: auto;
+}
+/*
+img {
+	max-width: 100%;
+	height: auto;
+}
+*/
+.banner {
+	padding: 5px;
+}
+h3 {
+	font-size: 24px;
+}
+.resize {
+	max-width: 70%;
+}
+.newsize {
+	max-width:5%;
+}
+input[type=text] {
+	width: 30%;
+	padding: 8px 15px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+*/
+textarea {
+	width: 100%
+	height: 300px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #fefefe;
+	resize: none;
+}
+/*
+div {
+	width: 100px;
+	height: 100px;
+	background: red;
+	transition: width 2s;
+}
+div:hover {
+	width: 300px;
+}
+*/
+/*bootstrap test below*/
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+   .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+   .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+* {
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 768px){
+	[class*="col-"] {
+		width: 100%;
+	}
+}
+
+
+/*below is CSS for scoresheet table*/
+
+
+div.scoreSheet {
+  border: 8px solid #70FF9F;
+  background-color: #EEEEEE;
+  width: 50%;
+  text-align: center;
+}
+.divTable.scoreSheet .divTableCell, .divTable.scoreSheet .divTableHead {
+  border: 1px solid rgb(32, 18, 18);
+  padding: 3px 2px;
+}
+.divTable.scoreSheet .divTableBody .divTableCell {
+  font-size: 13px;
+}
+.divTable.scoreSheet .divTableRow:nth-child(even) {
+  background: #70FF9F;
+}
+.divTable.scoreSheet .divTableHeading {
+  background: rgb(228, 190, 41);
+  background: -moz-linear-gradient(top, #eedb8c 0%, #ead375 66%, #E8CF66 100%);
+  background: -webkit-linear-gradient(top, #eedb8c 0%, #ead375 66%, #E8CF66 100%);
+  background: linear-gradient(to bottom, #eedb8c 0%, #ead375 66%, #E8CF66 100%);
+  border-bottom: 2px solid #444444;
+}
+.divTable.scoreSheet .divTableHeading .divTableHead {
+  font-size: 15px;
+  font-weight: bold;
+  color: #3D2B1F;
+  border-left: 2px solid #D0E4F5;
+}
+.divTable.scoreSheet .divTableHeading .divTableHead:first-child {
+  border-left: none;
+}
+
+.scoreSheet .tableFootStyle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #70FF9F;
+  background: -moz-linear-gradient(top, #94ffb7 0%, #7effa8 66%, #70FF9F 100%);
+  background: -webkit-linear-gradient(top, #94ffb7 0%, #7effa8 66%, #70FF9F 100%);
+  background: linear-gradient(to bottom, #94ffb7 0%, #7effa8 66%, #70FF9F 100%);
+  border-top: 2px solid #444444;
+}
+.scoreSheet .tableFootStyle {
+  font-size: 14px;
+}
+.scoreSheet .tableFootStyle .links {
+	 text-align: right;
+}
+.scoreSheet .tableFootStyle .links a{
+  display: inline-block;
+  background: rgb(40, 37, 126);
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.scoreSheet.outerTableFooter {
+  border-top: none;
+}
+.scoreSheet.outerTableFooter .tableFootStyle {
+  padding: 3px 5px; 
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
+
+/*dice*/
+
+div.dice{
+	/*float:left;*/
+	width:50px;
+	background:#F5F5F5;
+	border:#999 1px solid;
+	padding:10px;
+	font-size:24px;
+	text-align:center;
+	margin:5px;
+}
+div.playerButton{
+	text-align:center;
+}
+.rollButton{
+	padding: 15px;
+}
+.diceRows{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}

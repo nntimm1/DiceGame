@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> King of the Dice!</title>
+		<meta name="description" content="a fun little dice game">
+		<meta name="keywords" content="dice, nick, game, code demo, example, fullstack, free">
+		<meta name="author" content="Nick T.">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+<!-- 		<script>document.getElementById("rollBtn").disabled = true; </script> -->
+		<h1>King of the Dice!</h1>
+		<center>
+		<p>You must click 'Begin Game' to start playing.</p>
+	</center>
+	<!-- 	<center>
+		<p>Enter number of players:</p>
+			<input id="numb">
+		<div class="playerButton">
+			<button type="button" onclick="playerQuant()">Play</button>
+		</div>
+	</center> -->
+	<!-- <center> -->
+		<!-- <p id="demo"></p> -->
+<!-- 	</center> -->
+	<center>
+	<div id="startGame">
+		<button id="startTheGame" onclick="startGame()">Begin Game</button>
+	</div>
+
+
+	<center>
+		<div id="rollButton">
+			<button id="rollBtn" onclick="rollDice()">Roll Dice</button>
+			<button id="rollBtn2" onclick="rollDice()" style="display: none">P2 Roll Dice</button>
+		</div>
+<center>
+	<section id="theDice">
+		<div class="diceRows">
+		<div class="row">
+			<div class="col-4">
+				<div id="dice4" class="dice">0</div>
+				<button type="button" id="button4" onclick="buttonDiceFour(d4)">Score d4</button> 
+			</div>
+			<div class="col-4">
+				<div id="dice6" class="dice">0</div>
+				<button type="button" id="button6" onclick="buttonDiceSix(d6)">Score d6</button> 
+			</div>
+			<div class="col-4">
+				<div id="dice8" class="dice">0</div>
+				<button type="button" id="button8" onclick="buttonDiceEight(d8)">Score d8</button>
+			</div>
+		</div>
+		</div>
+		<div class="diceRows">
+		<div class="row">
+			<div class="col-4">
+				<div id="dice10" class="dice">0</div> 
+				<button type="button" id="button10" onclick="buttonDiceTen(d10)">Score d10</button>
+			</div>
+			<div class="col-4">
+				<div id="dice12" class="dice">0</div>
+				<button type="button" id="button12" onclick="buttonDiceTwelve(d12)">Score d12</button>
+			</div>
+			<div class="col-4">
+				<div id="dice20" class="dice">0</div>
+				<button type="button" id="button20" onclick="buttonDiceTwenty(d20)">Score d20</button>
+			</div>
+		</div>
+		</div>
+	</section>
+</center>
+		<button type="button" id="p1TieBreak" style="display: none" onclick="p1BreakTie()">P1 Tie Break!</button>
+		<button type="button" id="finishButton" onclick="finishGame()">Finish Game</button>
+		<button type="button" id="p2TieBreak" style="display: none" onclick="p2BreakTie()">P2 Tie Break!</button>
+		<!-- <button type="button" id="resetButton" onclick="resetGame()">Reset Game</button> -->
+	</center>
+	<center>
+		<div class="divTable scoreSheet">
+				<div class="divTableHeading">
+					<div class="divTableRow">
+						<div class="divTableHead">Player</div>
+						<div id="r1" class="divTableHead">Round 1</div>
+						<div id="r2" class="divTableHead">Round 2</div>
+						<div id="r3" class="divTableHead">Round 3</div>
+						<div id="r4" class="divTableHead">Round 4</div>
+						<div id="r5" class="divTableHead">Round 5</div>
+						<div id="r6" class="divTableHead">Round 6</div>
+					</div>
+				</div>
+				<div class="divTableBody">
+					<div id="player1" class="divTableRow">
+						<div id="1-1" class="divTableCell">Player 1</div>
+						<div id="2-1" class="divTableCell"></div><!-- 1-1 -->
+						<div id="3-1" class="divTableCell"></div><!-- 2-1 -->
+						<div id="4-1" class="divTableCell"></div><!-- 3-1 -->
+						<div id="5-1" class="divTableCell"></div><!-- 4-1 -->
+						<div id="6-1" class="divTableCell"></div><!-- 5-1 -->
+						<div id="7-1" class="divTableCell"></div><!-- 6-1 -->
+
+					</div>
+					<div id="player2" class="divTableRow">
+						<div id="1-2" class="divTableCell">Player 2</div>
+						<div id="2-2" class="divTableCell"></div><!-- 2-2 -->
+						<div id="3-2" class="divTableCell"></div><!-- 3-2 -->
+						<div id="4-2" class="divTableCell"></div><!-- 4-2 -->
+						<div id="5-2" class="divTableCell"></div><!-- 5-2 -->
+						<div id="6-2" class="divTableCell"></div><!-- 6-2 -->
+						<div id="7-2" class="divTableCell"></div><!-- 7-2 -->
+
+					</div>
+					<div id="player3" class="divTableRow">
+						<div id="1-3" class="divTableCell">Player 3</div>
+						<div id="2-3" class="divTableCell"></div><!-- 2-3 -->
+						<div id="3-3" class="divTableCell"></div><!-- 3-3 -->
+						<div id="4-3" class="divTableCell"></div><!-- 4-3 -->
+						<div id="5-3" class="divTableCell"></div><!-- 5-3 -->
+						<div id="6-3" class="divTableCell"></div><!-- 6-3 -->
+						<div id="7-3" class="divTableCell"></div><!-- 7-3 -->
+
+					</div>
+					<div id="player4" class="divTableRow">
+						<div id="1-4" class="divTableCell">Player 4</div>
+						<div id="2-4" class="divTableCell"></div><!-- 2-4 -->
+						<div id="3-4" class="divTableCell"></div><!-- 3-4 -->
+						<div id="4-4" class="divTableCell"></div><!-- 4-4 -->
+						<div id="5-4" class="divTableCell"></div><!-- 5-4 -->
+						<div id="6-4" class="divTableCell"></div><!-- 6-4 -->
+						<div id="7-4" class="divTableCell"></div><!-- 7-4 -->
+
+					</div>
+					<div id="player5" class="divTableRow">
+						<div id="1-5" class="divTableCell">Player 5</div>
+						<div id="2-5" class="divTableCell"></div><!-- 2-5 -->
+						<div id="3-5" class="divTableCell"></div><!-- 3-5 -->
+						<div id="4-5" class="divTableCell"></div><!-- 4-5 -->
+						<div id="5-5" class="divTableCell"></div><!-- 5-5 -->
+						<div id="6-5" class="divTableCell"></div><!-- 6-5 -->
+						<div id="7-5" class="divTableCell"></div><!-- 7-5 -->
+
+					</div>
+					<div id="player6" class="divTableRow">
+						<div id="1-6" class="divTableCell">Player 6</div>
+						<div id="2-6" class="divTableCell"></div><!-- 2-6 -->
+						<div id="3-6" class="divTableCell"></div><!-- 3-6 -->
+						<div id="4-6" class="divTableCell"></div><!-- 4-6 -->
+						<div id="5-6" class="divTableCell"></div><!-- 5-6 -->
+						<div id="6-6" class="divTableCell"></div><!-- 6-6 -->
+						<div id="7-6" class="divTableCell"></div><!-- 7-6 -->
+
+                    </div>
+                    <div id="player7" class="divTableRow">
+						<div id="1-6" class="divTableCell">Player 7</div>
+						<div id="2-6" class="divTableCell"></div><!-- 2-6 -->
+						<div id="3-6" class="divTableCell"></div><!-- 3-6 -->
+						<div id="4-6" class="divTableCell"></div><!-- 4-6 -->
+						<div id="5-6" class="divTableCell"></div><!-- 5-6 -->
+						<div id="6-6" class="divTableCell"></div><!-- 6-6 -->
+						<div id="7-6" class="divTableCell"></div><!-- 7-6 -->
+
+                    </div>
+                    <div id="player8" class="divTableRow">
+						<div id="1-6" class="divTableCell">Player 8</div>
+						<div id="2-6" class="divTableCell"></div><!-- 2-6 -->
+						<div id="3-6" class="divTableCell"></div><!-- 3-6 -->
+						<div id="4-6" class="divTableCell"></div><!-- 4-6 -->
+						<div id="5-6" class="divTableCell"></div><!-- 5-6 -->
+						<div id="6-6" class="divTableCell"></div><!-- 6-6 -->
+						<div id="7-6" class="divTableCell"></div><!-- 7-6 -->
+
+                    </div>
+                    <div id="player9" class="divTableRow">
+						<div id="1-6" class="divTableCell">Player 9</div>
+						<div id="2-6" class="divTableCell"></div><!-- 2-6 -->
+						<div id="3-6" class="divTableCell"></div><!-- 3-6 -->
+						<div id="4-6" class="divTableCell"></div><!-- 4-6 -->
+						<div id="5-6" class="divTableCell"></div><!-- 5-6 -->
+						<div id="6-6" class="divTableCell"></div><!-- 6-6 -->
+						<div id="7-6" class="divTableCell"></div><!-- 7-6 -->
+
+                    </div>
+                    <div id="player10" class="divTableRow">
+						<div id="1-6" class="divTableCell">Player 10</div>
+						<div id="2-6" class="divTableCell"></div><!-- 2-6 -->
+						<div id="3-6" class="divTableCell"></div><!-- 3-6 -->
+						<div id="4-6" class="divTableCell"></div><!-- 4-6 -->
+						<div id="5-6" class="divTableCell"></div><!-- 5-6 -->
+						<div id="6-6" class="divTableCell"></div><!-- 6-6 -->
+						<div id="7-6" class="divTableCell"></div><!-- 7-6 -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+			<center>
+				<div>
+				<h2>How to Play</h2>
+			</div>
+			<div>
+				<h3>Gameplay</h3>
+				<p>
+                    In the first three rounds, the lowest two players each round are removed <br> 
+                    from the game leaving 4 players in the game. <br>
+                    In rounds 4 and 5, the lowest player is removed from the <br> 
+                    game leaving 2 players in the game.<br>
+					In the 6th and final round, a shootout occurs between the final two players. <br> 
+				</p>
+				<h3>Scoring</h3>
+				<p>
+
+                    The objective of the game is to be the last player standing! <br> 
+				</p>
+			</div>
+		</center>
+	</body>
+	<script src="gamePlay.js" type="text/javascript"></script>
+	<center>
+	<footer>
+
+	</footer>
+</center>
+</html>
