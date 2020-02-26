@@ -14,46 +14,47 @@
 
 		<h1>King of the Dice!</h1>
 		<center>
-		<p>You must click 'Begin Game' to start playing.</p>
+		<p>Click "Roll Dice" to start the game</p>
 	</center>
 
 	<center>
 		<div id="rollButton">
-			<button id="rollBtn" onclick="rollDice()">Roll Dice</button>
-			<button id="rollBtn2" onclick="rollDice()" style="display: none">P2 Roll Dice</button>
+			<button id="rollDi" onclick="rollDi()">Roll Dice</button>
 		</div>
     <center>
 	<section id="theDice">
 		<div class="diceRows">
 		<div class="row">
-			<div class="col-4">
-				<div id="dice4" class="dice">0</div>
-				<button type="button" id="button4" onclick="buttonDiceFour(d4)">Score d4</button> 
+			<div class="col-2">
+                <div id="dice4" class="dice">0</div>
+                <div class="dicelabel">Dice 4</div>
 			</div>
-			<div class="col-4">
-				<div id="dice6" class="dice">0</div>
-				<button type="button" id="button6" onclick="buttonDiceSix(d6)">Score d6</button> 
+			<div class="col-2">
+                <div id="dice6" class="dice">0</div>
+                <div class="dicelabel">Dice 6</div>
 			</div>
-			<div class="col-4">
-				<div id="dice8" class="dice">0</div>
-				<button type="button" id="button8" onclick="buttonDiceEight(d8)">Score d8</button>
+			<div class="col-2">
+                <div id="dice8" class="dice">0</div>
+                <div class="dicelabel">Dice 8</div>
 			</div>
-		</div>
-		</div>
-		<div class="diceRows">
-		<div class="row">
-			<div class="col-4">
-				<div id="dice10" class="dice">0</div> 
-				<button type="button" id="button10" onclick="buttonDiceTen(d10)">Score d10</button>
+			<div class="col-2">
+                <div id="dice10" class="dice">0</div> 
+                <div class="dicelabel">Dice 10</div>
 			</div>
-			<div class="col-4">
-				<div id="dice12" class="dice">0</div>
-				<button type="button" id="button12" onclick="buttonDiceTwelve(d12)">Score d12</button>
+			<div class="col-2">
+                <div id="dice12" class="dice">0</div>
+                <div class="dicelabel">Dice 12</div>
 			</div>
-			<div class="col-4">
-				<div id="dice20" class="dice">0</div>
-				<button type="button" id="button20" onclick="buttonDiceTwenty(d20)">Score d20</button>
-			</div>
+			<div class="col-2">
+                <div id="dice20" class="dice">0</div>
+                <div class="dicelabel">Dice 20</div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="diceTotal" class="dice">0</div>
+                    <div class="dicelabel">Round Total</div>
+    
+                </div>
 		</div>
 		</div>
 	</section>
