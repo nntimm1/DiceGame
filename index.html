@@ -59,9 +59,9 @@
 		</div>
 	</section>
 </center>
-		<button type="button" id="p1TieBreak" style="display: none" onclick="p1BreakTie()">P1 Tie Break!</button>
-		<button type="button" id="finishButton" onclick="finishGame()">Finish Game</button>
-		<button type="button" id="p2TieBreak" style="display: none" onclick="p2BreakTie()">P2 Tie Break!</button>
+		
+		<button type="button" id="finishButton" onclick="submitScore()">Submit Score</button>
+		
 
 	</center>
 	<center>
@@ -80,102 +80,102 @@
 				<div class="divTableBody">
 					<div id="player1" class="divTableRow">
 						<div id="1-1" class="divTableCell">Player 1</div>
-						<div id="2-1" class="divTableCell"></div>
-						<div id="3-1" class="divTableCell"></div>
-						<div id="4-1" class="divTableCell"></div>
-						<div id="5-1" class="divTableCell"></div>
-						<div id="6-1" class="divTableCell"></div>
-						<div id="7-1" class="divTableCell"></div>
+						<div id="2-1" class="divTableCell">0</div>
+						<div id="3-1" class="divTableCell">0</div>
+						<div id="4-1" class="divTableCell">0</div>
+						<div id="5-1" class="divTableCell">0</div>
+						<div id="6-1" class="divTableCell">0</div>
+						<div id="7-1" class="divTableCell">0</div>
 
 					</div>
 					<div id="player2" class="divTableRow">
 						<div id="1-2" class="divTableCell">Player 2</div>
-						<div id="2-2" class="divTableCell"></div>
-						<div id="3-2" class="divTableCell"></div>
-						<div id="4-2" class="divTableCell"></div>
-						<div id="5-2" class="divTableCell"></div>
-						<div id="6-2" class="divTableCell"></div>
-						<div id="7-2" class="divTableCell"></div>
+						<div id="2-2" class="divTableCell">0</div>
+						<div id="3-2" class="divTableCell">0</div>
+						<div id="4-2" class="divTableCell">0</div>
+						<div id="5-2" class="divTableCell">0</div>
+						<div id="6-2" class="divTableCell">0</div>
+						<div id="7-2" class="divTableCell">0</div>
 
 					</div>
 					<div id="player3" class="divTableRow">
 						<div id="1-3" class="divTableCell">Player 3</div>
-						<div id="2-3" class="divTableCell"></div>
-						<div id="3-3" class="divTableCell"></div>
-                        <div id="4-3" class="divTableCell"></div>
-    					<div id="5-3" class="divTableCell"></div>
-						<div id="6-3" class="divTableCell"></div>
-						<div id="7-3" class="divTableCell"></div>
+						<div id="2-3" class="divTableCell">0</div>
+						<div id="3-3" class="divTableCell">0</div>
+                        <div id="4-3" class="divTableCell">0</div>
+    					<div id="5-3" class="divTableCell">0</div>
+						<div id="6-3" class="divTableCell">0</div>
+						<div id="7-3" class="divTableCell">0</div>
 
 					</div>
 					<div id="player4" class="divTableRow">
 						<div id="1-4" class="divTableCell">Player 4</div>
-						<div id="2-4" class="divTableCell"></div>
-						<div id="3-4" class="divTableCell"></div>
-						<div id="4-4" class="divTableCell"></div>
-						<div id="5-4" class="divTableCell"></div>
-						<div id="6-4" class="divTableCell"></div>
-						<div id="7-4" class="divTableCell"></div>
+						<div id="2-4" class="divTableCell">0</div>
+						<div id="3-4" class="divTableCell">0</div>
+						<div id="4-4" class="divTableCell">0</div>
+						<div id="5-4" class="divTableCell">0</div>
+						<div id="6-4" class="divTableCell">0</div>
+						<div id="7-4" class="divTableCell">0</div>
 
 					</div>
 					<div id="player5" class="divTableRow">
 						<div id="1-5" class="divTableCell">Player 5</div>
-						<div id="2-5" class="divTableCell"></div>
-						<div id="3-5" class="divTableCell"></div>
-						<div id="4-5" class="divTableCell"></div>
-						<div id="5-5" class="divTableCell"></div>
-						<div id="6-5" class="divTableCell"></div>
-						<div id="7-5" class="divTableCell"></div>
+						<div id="2-5" class="divTableCell">0</div>
+						<div id="3-5" class="divTableCell">0</div>
+						<div id="4-5" class="divTableCell">0</div>
+						<div id="5-5" class="divTableCell">0</div>
+						<div id="6-5" class="divTableCell">0</div>
+						<div id="7-5" class="divTableCell">0</div>
 
 					</div>
 					<div id="player6" class="divTableRow">
 						<div id="1-6" class="divTableCell">Player 6</div>
-						<div id="2-6" class="divTableCell"></div>
-						<div id="3-6" class="divTableCell"></div>
-						<div id="4-6" class="divTableCell"></div>
-						<div id="5-6" class="divTableCell"></div>
-						<div id="6-6" class="divTableCell"></div>
-						<div id="7-6" class="divTableCell"></div>
+						<div id="2-6" class="divTableCell">0</div>
+						<div id="3-6" class="divTableCell">0</div>
+						<div id="4-6" class="divTableCell">0</div>
+						<div id="5-6" class="divTableCell">0</div>
+						<div id="6-6" class="divTableCell">0</div>
+						<div id="7-6" class="divTableCell">0</div>
 
                     </div>
                     <div id="player7" class="divTableRow">
 						<div id="1-7" class="divTableCell">Player 7</div>
-						<div id="2-7" class="divTableCell"></div>
-						<div id="3-7" class="divTableCell"></div>
-						<div id="4-7" class="divTableCell"></div>
-						<div id="5-7" class="divTableCell"></div>
-						<div id="6-7" class="divTableCell"></div>
-						<div id="7-7" class="divTableCell"></div>
+						<div id="2-7" class="divTableCell">0</div>
+						<div id="3-7" class="divTableCell">0</div>
+						<div id="4-7" class="divTableCell">0</div>
+						<div id="5-7" class="divTableCell">0</div>
+						<div id="6-7" class="divTableCell">0</div>
+						<div id="7-7" class="divTableCell">0</div>
 
                     </div>
                     <div id="player8" class="divTableRow">
 						<div id="1-8" class="divTableCell">Player 8</div>
-						<div id="2-8" class="divTableCell"></div>
-						<div id="3-8" class="divTableCell"></div>
-						<div id="4-8" class="divTableCell"></div>
-						<div id="5-8" class="divTableCell"></div>
-						<div id="6-8" class="divTableCell"></div>
-						<div id="7-8" class="divTableCell"></div>
+						<div id="2-8" class="divTableCell">0</div>
+						<div id="3-8" class="divTableCell">0</div>
+						<div id="4-8" class="divTableCell">0</div>
+						<div id="5-8" class="divTableCell">0</div>
+						<div id="6-8" class="divTableCell">0</div>
+						<div id="7-8" class="divTableCell">0</div>
 
                     </div>
                     <div id="player9" class="divTableRow">
 						<div id="1-9" class="divTableCell">Player 9</div>
-						<div id="2-9" class="divTableCell"></div>
-						<div id="3-9" class="divTableCell"></div>
-						<div id="4-9" class="divTableCell"></div>
-						<div id="5-9" class="divTableCell"></div>
-						<div id="6-9" class="divTableCell"></div>
-						<div id="7-9" class="divTableCell"></div>
+						<div id="2-9" class="divTableCell">0</div>
+						<div id="3-9" class="divTableCell">0</div>
+						<div id="4-9" class="divTableCell">0</div>
+						<div id="5-9" class="divTableCell">0</div>
+						<div id="6-9" class="divTableCell">0</div>
+						<div id="7-9" class="divTableCell">0</div>
 
                     </div>
                     <div id="player10" class="divTableRow">
 						<div id="1-10" class="divTableCell">Player 10</div>
-						<div id="2-10" class="divTableCell"></div>
-						<div id="3-10" class="divTableCell"></div>
-						<div id="4-10" class="divTableCell"></div>
-						<div id="5-10" class="divTableCell"></div>
-						<div id="6-10" class="divTableCell"></div>
-						<div id="7-10" class="divTableCell"></div>
+						<div id="2-10" class="divTableCell">0</div>
+						<div id="3-10" class="divTableCell">0</div>
+						<div id="4-10" class="divTableCell">0</div>
+						<div id="5-10" class="divTableCell">0</div>
+						<div id="6-10" class="divTableCell">0</div>
+						<div id="7-10" class="divTableCell">0</div>
 
 					</div>
 				</div>

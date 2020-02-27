@@ -85,12 +85,7 @@ h2 {
 	width: 100%;
 	height: auto;
 }
-/*
-img {
-	max-width: 100%;
-	height: auto;
-}
-*/
+
 .banner {
 	padding: 5px;
 }
@@ -120,18 +115,7 @@ textarea {
 	background-color: #fefefe;
 	resize: none;
 }
-/*
-div {
-	width: 100px;
-	height: 100px;
-	background: red;
-	transition: width 2s;
-}
-div:hover {
-	width: 300px;
-}
-*/
-/*bootstrap test below*/
+
 .row:after {
     content: "";
     clear: both;
@@ -180,9 +164,6 @@ div:hover {
 		width: 100%;
 	}
 }
-
-
-/*below is CSS for scoresheet table*/
 
 .dicelabel{
     border: 4px solid black;
@@ -258,9 +239,6 @@ div.scoreSheet {
 .divTableHeading { display: table-header-group;}
 .divTableFoot { display: table-footer-group;}
 .divTableBody { display: table-row-group;}
-
-/*dice*/
-
 div.dice{
 	/*float:left;*/
 	width:50px;
@@ -271,9 +249,7 @@ div.dice{
 	text-align:center;
 	margin:5px;
 }
-div.playerButton{
-	text-align:center;
-}
+
 .rollButton{
 	padding: 15px;
 }
