@@ -1,10 +1,10 @@
-
-let round1Players = [{id="2-1"},{id="2-2"},{id="2-3"},{id="2-4"},{id="2-5"},{id="2-6"},{id="2-7"},{id="2-8"},{id="2-9"},{id="2-10"}];
-let round2Players = [{id="3-1"},{id="3-2"},{id="3-3"},{id="3-4"},{id="3-5"},{id="3-6"},{id="3-7"},{id="3-8"},{id="3-9"},{id="3-10"}];
-let round3Players = [{id="4-1"},{id="4-2"},{id="4-3"},{id="4-4"},{id="4-5"},{id="4-6"},{id="4-7"},{id="4-8"},{id="4-9"},{id="4-10"}];
-let round4Players = [{id="5-1"},{id="5-2"},{id="5-3"},{id="5-4"},{id="5-5"},{id="5-6"},{id="5-7"},{id="5-8"},{id="5-9"},{id="5-10"}];
-let round5Players = [{id="6-1"},{id="6-2"},{id="6-3"},{id="6-4"},{id="6-5"},{id="6-6"},{id="6-7"},{id="6-8"},{id="6-9"},{id="6-10"}];
-let round6Players = [{id="7-1"},{id="7-2"},{id="7-3"},{id="7-4"},{id="7-5"},{id="7-6"},{id="7-7"},{id="7-8"},{id="7-9"},{id="7-10"}];
+"use strict";
+let round1Players = [{id:"2-1"},{id:"2-2"},{id:"2-3"},{id:"2-4"},{id:"2-5"},{id:"2-6"},{id:"2-7"},{id:"2-8"},{id:"2-9"},{id:"2-10"}];
+let round2Players = [{id:"3-1"},{id:"3-2"},{id:"3-3"},{id:"3-4"},{id:"3-5"},{id:"3-6"},{id:"3-7"},{id:"3-8"},{id:"3-9"},{id:"3-10"}];
+let round3Players = [{id:"4-1"},{id:"4-2"},{id:"4-3"},{id:"4-4"},{id:"4-5"},{id:"4-6"},{id:"4-7"},{id:"4-8"},{id:"4-9"},{id:"4-10"}];
+let round4Players = [{id:"5-1"},{id:"5-2"},{id:"5-3"},{id:"5-4"},{id:"5-5"},{id:"5-6"},{id:"5-7"},{id:"5-8"},{id:"5-9"},{id:"5-10"}];
+let round5Players = [{id:"6-1"},{id:"6-2"},{id:"6-3"},{id:"6-4"},{id:"6-5"},{id:"6-6"},{id:"6-7"},{id:"6-8"},{id:"6-9"},{id:"6-10"}];
+let round6Players = [{id:"7-1"},{id:"7-2"},{id:"7-3"},{id:"7-4"},{id:"7-5"},{id:"7-6"},{id:"7-7"},{id:"7-8"},{id:"7-9"},{id:"7-10"}];
 
 
 
@@ -56,8 +56,9 @@ function rollDi(){
 
     function submitScore(){
         for (var i = 0 ; i < round1Players.length; i++)
-        if ([i] =0 ){
-            [i] = document.getElementById("diceTotal")
+        if ([i] ="0" ){
+            console.log(diceTotal)
+            // round1Players[i] = document.getElementById("2-1").innerHTML = "DiceToTal"
             break
         }
         else{
